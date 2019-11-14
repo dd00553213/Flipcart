@@ -15,6 +15,7 @@
 we are scanning the package where other controllers could be found. -->
 
 	<context:component-scan base-package="net.supdip.flipcartFrontend.controller"/>
+	<context:component-scan base-package="net.supdip.flipcartBackend.daoimpl"/>
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

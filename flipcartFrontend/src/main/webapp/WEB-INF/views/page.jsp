@@ -3,154 +3,87 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
-<spring:url  var="css" value="/resources/css"/>
-<spring:url  var="js" value="/resources/js"/>
+<spring:url  var="css" value="/assets/css"/>
+<spring:url  var="js" value="/assets/js"/>
 <spring:url  var="images" value="/resources/images"/>
 
 <c:set var="contextRoot" value="${pageContext.request.contextPath}" />
 
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="Start Bootstrap">
-<meta name="google-site-verification"
-	content="37Tru9bxB3NrqXCt6JT5Vx8wz2AJQ0G4TkC-j8WL3kw">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-<title>Shop Homepage - Start Bootstrap Tamplate</title>
-
-<meta name="description" content="">
-
-<link rel="stylesheet"
-	href="${css}/bootstrap.min.css">
-
-<link
-	href="${css}/myapp.css"
-	rel="stylesheet">
-
-<link rel="stylesheet"
-	href="https://pro.fontawesome.com/releases/v5.7.0/css/all.css"
-	integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev"
-	crossorigin="anonymous">
-
-<link rel="stylesheet" href="/assets/style-template.css">
-
-<link type="application/atom+xml" rel="alternate"
-	href="https://startbootstrap.com/feed.xml" title="startbootstrap" />
-<script type="3e11aa1fad1b08b67b36e9b8-text/javascript">
-  // Google Analytics Tracking Script
-  (function(i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function() {
-      (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date();
-    a = s.createElement(o),
-      m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-  ga('create', 'UA-38417733-17', 'startbootstrap.com');
-  ga('send', 'pageview');
-</script>
-<meta name='ir-site-verification-token' value='-28223945'>
-
-<meta property="og:title" content="Shop Homepage - Template Preview">
-<meta property="og:site_name" content="Start Bootstrap">
-<meta property="og:type" content="website">
-<meta property="og:description" content="">
-<meta property="og:image"
-	content="https://startbootstrap.com/assets/img/branding/og-start-bootstrap.png">
-<meta property="og:url"
-	content="https://startbootstrap.com/previews/shop-homepage/">
-<meta property="og:image:alt" content="Shop Homepage - Template Preview">
-
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image"
-	content="https://startbootstrap.com/assets/img/branding/start-bootstrap-logo-500x500.png">
-<meta name="twitter:site" content="@SBootstrap">
-
-<link rel="apple-touch-icon" sizes="180x180"
-	href="/assets/img/icons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32"
-	href="/assets/img/icons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16"
-	href="/assets/img/icons/favicon-16x16.png">
-<link rel="manifest" href="/assets/img/icons/site.webmanifest">
-<link rel="mask-icon" href="/assets/img/icons/safari-pinned-tab.svg"
-	color="#dd3d31">
-<meta name="msapplication-TileColor" content="#dd3d31">
-<meta name="theme-color" content="#ffffff">
-<script type="3e11aa1fad1b08b67b36e9b8-text/javascript"
-	src="//m.servedby-buysellads.com/monetization.js"></script>
-</head>
-<body class="preview-page">
-	<div class="preview-bar bg-white fixed-top py-2 border-bottom-primary">
-		<div class="container-fluid h-100">
-			<div class="row align-items-center justify-content-between h-100">
-				<div class="col">
-					<i class="fab fa-github text-github small"></i> <a class="small"
-						href="https://github.com/BlackrockDigital/startbootstrap-shop-homepage">View
-						on GitHub</a>
-				</div>
-				<div class="col d-none d-lg-block">
-					<ul class="nav responsive-toggler justify-content-center"
-						role="tablist">
-						<li class="nav-item"><a class="nav-link active"
-							id="desktopToggle" data-toggle="tab" href="#" role="tab"
-							aria-selected="true"> <i class="fal fa-desktop"></i>
-						</a></li>
-						<li class="nav-item"><a class="nav-link" id="mobileToggle"
-							data-toggle="tab" href="#" role="tab" aria-selected="false">
-								<i class="fal fa-mobile"></i>
-						</a></li>
-					</ul>
-				</div>
-				<div class="col text-right">
-					<a
-						href="https://github.com/BlackrockDigital/startbootstrap-shop-homepage/archive/gh-pages.zip"
-						class="btn btn-primary btn-sm mr-2 d-none d-md-inline-block"
-						onclick="if (!window.__cfRLUnblockHandlers) return false; ga('send','event','Download','click','Shop Homepage')"
-						data-cf-modified-3e11aa1fad1b08b67b36e9b8-="">Free Download</a> <a
-						href="https://blackrockdigital.github.io/startbootstrap-shop-homepage/"
-						class="btn btn-link btn-sm"><i class="fal fa-times mr-1"></i>
-						Remove Frame</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<iframe class="iframe-preview" width="100%"
-		src="https://blackrockdigital.github.io/startbootstrap-shop-homepage/"></iframe>
-	<script id="dsq-count-scr" src="//startbootstrap.disqus.com/count.js"
-		async type="3e11aa1fad1b08b67b36e9b8-text/javascript"></script>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-		crossorigin="anonymous"
-		type="3e11aa1fad1b08b67b36e9b8-text/javascript"></script>
-	<script
-		src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js"
-		integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP"
-		crossorigin="anonymous"
-		type="3e11aa1fad1b08b67b36e9b8-text/javascript"></script>
-	<script type="3e11aa1fad1b08b67b36e9b8-text/javascript"
-		src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
-	<script src="${js}/jquery.js"></script>
-	<script src="${js}/bootstrap.min.js"></script>
-	<script type="3e11aa1fad1b08b67b36e9b8-text/javascript">
-    $("#desktopToggle").on('click', function(e) {
-      e.preventDefault();
-      $(".iframe-preview").removeClass("iframe-preview-mobile");
-    });
-    $("#mobileToggle").on('click', function(e) {
-      e.preventDefault();
-      $(".iframe-preview").addClass("iframe-preview-mobile");
-    });
+  <title>Online Shopping - ${title}</title>
+  
+  <script>
+  	window.manu = '${title}';
   </script>
-	<script
-		src="https://ajax.cloudflare.com/cdn-cgi/scripts/95c75768/cloudflare-static/rocket-loader.min.js"
-		data-cf-settings="3e11aa1fad1b08b67b36e9b8-|49" defer=""></script>
+
+  <!-- Bootstrap core CSS -->
+  <link href="${css}/bootstrap.min.css" rel="stylesheet">
+
+ 	<!-- Bootstrap Readable Theme -->
+	<link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+	
+   <!-- Custom styles for this template -->
+   <link href="${css}/myapp.css" rel="stylesheet">
+
+</head>
+
+<body>
+		<div class="wrapper">
+		<!-- Navigation -->
+		<%@include file="./shared/navbar.jsp"%>
+
+		<!-- Page Content -->
+		<div class="content">
+
+			<!-- Loading the home content -->
+			<c:if test="${userClickHome == true}">
+				<%@include file="home.jsp"%>
+			</c:if>
+
+			<!-- Load only when user click about -->
+			<c:if test="${userClickAbout == true}">
+				<%@include file="about.jsp"%>
+			</c:if>
+			<!-- Load only when user click Contact -->
+			<c:if test="${userClickContact == true}">
+				<%@include file="contact.jsp"%>
+			</c:if>
+
+		<!-- Load only when user click Contact -->
+			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true}">
+				<%@include file="listProducts.jsp"%>
+			</c:if>
+		
+
+		</div>
+
+		<!-- Footer comes here -->
+  		<%@include file="./shared/footer.jsp" %>
+
+		<!-- jQuery -->
+		<script src="${js}/jquery.js"></script>
+
+		<script src="${js}/jquery.validate.js"></script>
+
+		<!-- Bootstrap Core JavaScript -->
+		<script src="${js}/bootstrap.min.js"></script>
+		
+		<!-- Self coded javascript -->
+  		<script src="${js}/myapp.js"></script>
+
+
+	</div>
 </body>
+
 </html>
